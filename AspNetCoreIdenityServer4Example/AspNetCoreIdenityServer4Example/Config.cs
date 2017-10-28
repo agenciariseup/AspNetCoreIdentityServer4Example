@@ -13,7 +13,7 @@ namespace AspNetCoreIdenityServer4Example
         {
             return new List<ApiResource>
             {
-                new ApiResource("api1", "My API")
+                new ApiResource("api1", "Nossa API")
             };
         }
 
@@ -21,22 +21,6 @@ namespace AspNetCoreIdenityServer4Example
         {
             return new List<Client>
             {
-                new Client
-                {
-                    ClientId = "clientId",
-
-                    // no interactive user, use the clientid/secret for authentication
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-
-                    // secret for authentication
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
-
-                    // scopes that client has access to
-                    AllowedScopes = { "api1" }
-                },
                 new Client
                 {
                     ClientId = "password.client",
@@ -57,14 +41,14 @@ namespace AspNetCoreIdenityServer4Example
                 new TestUser
                 {
                     SubjectId = "1",
-                    Username = "alice",
-                    Password = "password"
+                    Username = "manaces",
+                    Password = "123456"
                 },
                 new TestUser
                 {
                     SubjectId = "2",
-                    Username = "bob",
-                    Password = "password"
+                    Username = "pereira",
+                    Password = "123456"
                 }
             };
         }
